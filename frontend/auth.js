@@ -1,9 +1,11 @@
+
+
 const userUrl='http://localhost:3000/user/users'
 let signUpBtn=document.getElementById('sign-up-btn')
 let signInBtn=document.getElementById('sign-in-btn')
 var state;
 let passIn=document.getElementById('password-in')
-let passUp=document.getElementById('password')
+let passUp=document.getElementById('password-up')
 
 signUpBtn.addEventListener('click', signUp)
 signInBtn.addEventListener('click', signIn)
@@ -13,10 +15,10 @@ passUp.addEventListener('keydown', (e)=>{e.code=='Enter'?signUp():null})
 // Sign up
 function signUp(e){
     e.preventDefault()
-    let nameInp=document.getElementById('name').value
-    let emailInp=document.getElementById('email').value
-    let phoneInp=document.getElementById('phone').value
-    let passInp=document.getElementById('password').value
+    let nameInp=document.getElementById('name-up').value
+    let emailInp=document.getElementById('email-up').value
+    let phoneInp=document.getElementById('phone-up').value
+    let passInp=document.getElementById('password-up').value
 
     if(nameInp.length<3 || nameInp==""){
         alert('Enter a valid Name!')
@@ -31,10 +33,10 @@ function signUp(e){
         alert("Enter a Strong Password!")
         return
     }else{
-        document.getElementById('name').value=""
-        document.getElementById('email').value=""
-        document.getElementById('phone').value=""
-        document.getElementById('password').value=""
+        document.getElementById('name-up').value=""
+        document.getElementById('email-up').value=""
+        document.getElementById('phone-up').value=""
+        document.getElementById('password-up').value=""
 
         axios({
                 method : 'post',
@@ -88,6 +90,7 @@ function signIn(e){
                 }else if(response.data.code==1){
                     alert("Sign In Successful!")
                     sessionStorage.setItem('auth', JSON.stringify({token:response.data.token, userId:response.data.userId}))
+              
                     checkAuthState()
                 }
         }).catch(err=>console.log(err))
