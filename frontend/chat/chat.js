@@ -1,11 +1,10 @@
 var state, group;
 let allChats;
 const chatUrl='http://localhost:3000/chat/chats'
+
 let backBtn=document.getElementById('back')
 let sendBtn=document.getElementById('send')
 let messageInp=document.getElementById('message')
-
-
 
 // Event Listeners
 backBtn.addEventListener('click', goBack)
@@ -169,7 +168,7 @@ function setHeader(){
     let header=document.querySelector('.chat-desc')
     header.id=group
     let img=document.createElement('img')
-    img.src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"
+    img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7M-SGyKQ1pNCsXSi8Q-MWpEj5S3J-71f3G5w8QnWLp54ksvYBeQvCtaNk4iqC350pkGc&usqp=CAU"
     img.id=group
     header.appendChild(img)
     let p=document.createElement('p')

@@ -7,8 +7,8 @@
   width: 52vh;
   height: 90vh;
   padding: 6vh;
-  background: #ed4d09;
-  box-shadow: 0 0 100px #00ff37;
+  background: #09ed20;
+  box-shadow: 0 0 500px #0d1ce9;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background: #125be2;
+    background:white;
 }
 
 .chat-header{
@@ -118,8 +118,8 @@ h2 {
 }
 
 .sender{
-    color: rgb(62, 16, 228);
-    background-color: #42a3e4;
+    color: rgb(27, 16, 228);
+    background-color:antiquewhite;
     float: right;
     clear: both;
 }
