@@ -156,7 +156,7 @@ function getChats(){
                     p.className=state.userId==chat.userId?'message sender':"message"
                     p.innerHTML=state.userId==chat.userId?chat.message:`${chat.name} : ${chat.message}`
                     chats.appendChild(p)
-                    scrollDown()
+                   scrollDown()
                 })
             }
         }).catch(err=>console.log(err))
@@ -186,8 +186,9 @@ function manageGroup(e){
 
 // DOM
 window.addEventListener('DOMContentLoaded', ()=>{
-    setHeader()
-    setInterval(getChats, 1000)
+    setHeader();
+    getChats();
+setTimeout(getChats,1000)
     checkInput()
 })
 

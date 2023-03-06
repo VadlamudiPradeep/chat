@@ -50,7 +50,7 @@ function showAddMembersPopup(){
                 div.className='member'
                 div.id=user.id
                 let img=document.createElement('img')
-                img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBQwjbXycbtuLSEUkWeQp5y1RW-ViNqKCrrdO-YDRuKb3XZ5q4K0_PLZEbJQK53_zoHPI&usqp=CAU"
+                img.src="../Assets/default_user_icon.png"
                 let p=document.createElement('p')
                 p.innerHTML=user.name
                 let input=document.createElement('input')
@@ -194,7 +194,7 @@ function showGroups(){
                 div.className='group'
                 div.id=group.id
                 let img=document.createElement('img')
-                img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8kyEPc77fKT0nJxmeeHYfsngjRK_ulgQe4XTwAIv8jNdH8XPA6ImOxEwnh6Advk-1b3g&usqp=CAU"
+                img.src="../Assets/default_icon.png"
                 img.id=group.id
                 let p=document.createElement('p')
                 p.innerHTML=group.name
@@ -212,10 +212,10 @@ function showGroups(){
 
 function showChats(e){
     const groupId=e.target.id
+    console.log(e.target.id)
     sessionStorage.setItem('groupId', groupId)
     localStorage.removeItem('chats')
     location.href='../chat/chat.html'
 }
 
 window.addEventListener('DOMContentLoaded', showGroups)
-

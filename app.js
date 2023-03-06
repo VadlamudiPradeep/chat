@@ -35,7 +35,7 @@ Chats.belongsTo(Groups)
 
 sequelize
  //.sync({ force: true })
-.sync()
+ .sync()
 .then(response=>{
     
     app.listen(3000, ()=>console.log("Server started running on Port: 3000"))
