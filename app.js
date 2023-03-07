@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors=require('cors')
 const helmet = require('helmet')
+require('dotenv').config()
 
 const sequelize=require('./util/database')
 const userRoutes=require('./routes/user')
@@ -38,5 +39,5 @@ sequelize
  .sync()
 .then(response=>{
     
-    app.listen(3000, ()=>console.log("Server started running on Port: 3000"))
+    app.listen(process.env.PORT, ()=>console.log("Server started running on Port: 3000"))
 }).catch(err=>console.log(err))
